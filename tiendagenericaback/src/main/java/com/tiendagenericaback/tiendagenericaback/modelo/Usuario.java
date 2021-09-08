@@ -7,87 +7,93 @@ import javax.persistence.*;
 public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Id;
-	private long Cedula_usuario;
-	private String Nombre_usuario;
-	private String Email_usuario;
-	private String Usuario;
-	private String Clave;
+	private int cedula;
+	private String nombre_completo;
+	private String correo_electronico;
+	private String usuario;
+	private String clave;
+	private String area;
+	private int id_area;
+	private String estado;
 	
 	public Usuario() {
 	}
 
-	public Usuario(int id, long cedula_usuario, String nombre_usuario, String email_usuario, String usuario,
-			String clave) {
+	public Usuario(int cedula, String nombre_completo, String correo_electronico, String usuario, String contraseña,
+			String area, int id_area, String estado) {
 		super();
-		this.Id = id;
-		this.Cedula_usuario = cedula_usuario;
-		this.Nombre_usuario = nombre_usuario;
-		this.Email_usuario = email_usuario;
-		this.Usuario = usuario;
-		this.Clave = clave;
+		this.cedula = cedula;
+		this.nombre_completo = nombre_completo;
+		this.correo_electronico = correo_electronico;
+		this.usuario = usuario;
+		this.clave = contraseña;
+		this.area = area;
+		this.id_area = id_area;
+		this.estado = estado;
 	}
 
-
-
-
-	public int getId() {
-		return Id;
+	public int getCedula() {
+		return cedula;
 	}
 
-
-	public void setId(int id) {
-		Id = id;
+	public void setCedula(int cedula) {
+		this.cedula = cedula;
 	}
 
-
-	public long getCedula_usuario() {
-		return Cedula_usuario;
+	public String getNombre_completo() {
+		return nombre_completo;
 	}
 
-
-	public void setCedula_usuario(long cedula_usuario) {
-		Cedula_usuario = cedula_usuario;
+	public void setNombre_completo(String nombre_completo) {
+		this.nombre_completo = nombre_completo;
 	}
 
-
-	public String getNombre_usuario() {
-		return Nombre_usuario;
+	public String getCorreo_electronico() {
+		return correo_electronico;
 	}
 
-
-	public void setNombre_usuario(String nombre_usuario) {
-		Nombre_usuario = nombre_usuario;
+	public void setCorreo_electronico(String correo_electronico) {
+		this.correo_electronico = correo_electronico;
 	}
-
-
-	public String getEmail_usuario() {
-		return Email_usuario;
-	}
-
-
-	public void setEmail_usuario(String email_usuario) {
-		Email_usuario = email_usuario;
-	}
-
 
 	public String getUsuario() {
-		return Usuario;
+		return usuario;
 	}
-
 
 	public void setUsuario(String usuario) {
-		Usuario = usuario;
+		this.usuario = usuario;
 	}
-
 
 	public String getClave() {
-		return Clave;
+		return clave;
 	}
 
+	public void setContraseña(String contraseña) {
+		this.clave = clave;
+	}
 
-	public void setClave(String clave) {
-		Clave = clave;
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+
+	public int getId_area() {
+		return id_area;
+	}
+
+	public void setId_area(int id_area) {
+		this.id_area = id_area;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 	
 }
